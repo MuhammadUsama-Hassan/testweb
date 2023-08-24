@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+.some-element {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: red;
+  margin: auto;
+}
+
+
+@media (max-width: 380px) {
+  .some-element {
+    background-color: blue; 
+  }
+}
+
+@media (min-width: 381px) and (max-width: 776px) {
+  .some-element {
+    background-color: green; 
+  }
+}
+
+@media (min-width: 777px) and (max-width: 992px) {
+  .some-element {
+    background-color: rgb(255, 0, 230); 
+  }
+}
+    </style>
+</head>
+<body>
+    <div class="some-element"></div>
+</body>
+</html>

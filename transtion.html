@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+  }
+
+  .card-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 200px;
+    height: 300px;
+    background-color: pink; /* Initial color */
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+  }
+
+  .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  }
+
+  .rotate {
+    animation: rotate 4s linear infinite;
+  }
+
+  .rotate:hover {
+    background-color: purple; /* Color change while rotating */
+  }
+
+  .slide {
+    animation: slide 3s infinite alternate;
+  }
+
+  .slide:hover {
+    background-color: purple; /* Color change while sliding */
+  }
+
+  .hover-color-change {
+    background-color: pink; /* Initial color */
+  }
+
+  .hover-color-change:hover {
+    background-color: purple; /* Color change on hover */
+  }
+
+  @keyframes rotate {
+    0% {
+      transform: rotate(0);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes slide {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+</style>
+<title>Transitioning Cards</title>
+</head>
+<body>
+  <div class="card-container">
+    <div class="card rotate"></div>
+    <div class="card slide"></div>
+    <div class="card hover-color-change"></div>
+  </div>
+</body>
+</html>
